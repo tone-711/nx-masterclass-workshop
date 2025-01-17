@@ -1,0 +1,13 @@
+<ng-container *ngIf="movies">
+  <movie-list
+    *ngIf="movies && movies.length > 0; else elseTmpl"
+    [movies]="movies">
+  </movie-list>
+
+  <!-- insert (elementVisible) here -->
+  <div></div>
+
+  <ng-template #elseTmpl>
+    <h1>These are not the droids you are looking for</h1>
+  </ng-template>
+</ng-container>
