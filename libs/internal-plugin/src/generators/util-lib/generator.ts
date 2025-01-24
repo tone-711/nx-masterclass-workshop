@@ -23,7 +23,7 @@ export async function utilLibGenerator(
   console.log(options);
   await libraryGenerator(tree, {
     name: `util-${options.name}`,
-    directory: `libs/${options.directory}/{${options.type}-util-[${options.name}`,
+    directory: `libs/${options.type}/util-${options.name}`,
   });
   await formatFiles(tree);
 }

@@ -1,9 +1,9 @@
 export default {
-  displayName: 'util-dates',
+  displayName: 'util-notifications',
   preset: '../../../jest.preset.js',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/libs/movies/{util-dates',
+  coverageDirectory: '../../../coverage/libs/api/util-notifications',
 };
