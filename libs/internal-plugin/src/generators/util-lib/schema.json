@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "id": "utillib",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "directory": {
+      "type": "string",
+      "description": "directory name",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "Provide the library type",
+      "x-prompt": {
+        "message": "Which type of library would you like to generate?",
+        "type": "list",
+        "items": [
+          {
+            "value": "movies",
+            "label": "movies"
+          },
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["name"]
+}
